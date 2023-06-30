@@ -12,14 +12,14 @@ import StateTutorial from "./components/StateTutorial";
 function App() {
   return (
     <div className="App">
-      {/* <StateTutorial /> */}
-      {/* <ReducerTutorial /> */}
-      {/* <EffectTutorial /> */}
-      {/* <RefTutorial /> */}
-      {/* <LayoutEffectTutrial /> */}
-      {/* <ImperativeHandle /> */}
-      {/* <ContextTutorial /> */}
-      {/* <MemoTutorial /> */}
+      <StateTutorial />
+      <ReducerTutorial />
+      <EffectTutorial />
+      <RefTutorial />
+      <LayoutEffectTutrial />
+      <ImperativeHandle />
+      <ContextTutorial />
+      <MemoTutorial />
       <CallbackTutorial />
     </div>
   );

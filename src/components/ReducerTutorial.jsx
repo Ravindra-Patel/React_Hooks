@@ -1,5 +1,4 @@
-import React, { useState, useReducer } from "react";
-import { act } from "react-dom/test-utils";
+import React, { useReducer } from "react";
 
 //Alternative to the useState Hook. Performs similar function.
 //Specific benefit: use when we want to mutate more than 1 states on a specific event
@@ -8,6 +7,8 @@ const reducer = (state, action) => {
   switch (action.type) {
     case "INCREMENT":
       return { count: state.count + 1, showText: state.showText };
+    case "DECREMENT":
+      return { count: state.count - 1, showText: state.showText };
     case "toggleShowText":
       return { count: state.count, showText: !state.showText };
     default:
@@ -17,6 +18,7 @@ const reducer = (state, action) => {
 
 //Commented code is used to peform the same function without the useReducer Hook
 const ReducerTutorial = () => {
+  console.log("ReducerTutorial rendered");
   //   let [count, setCount] = useState(0);
   //   let [showText, setShowText] = useState(true);
 
@@ -52,6 +54,13 @@ const ReducerTutorial = () => {
         }}
       >
         Increment Value
+      </button>
+      <button
+        onClick={() => {
+          dispatch({ type: "DECREMENT" });
+        }}
+      >
+        Decrement Value
       </button>
 
       {/* {showText && <p>This is a Text</p>} */}
