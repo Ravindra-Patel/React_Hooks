@@ -1,13 +1,15 @@
 import React, { useState } from "react";
 
-//The componenets will re-render the state snapshot when the state values are mutated
+//The componenets will be re-rendered whenever the state values are mutated/changed
 
 const StateTutorial = () => {
+  console.log("SateTutorial Component Rendered");
   let [counter, setCounter] = useState(0);
-  const [inputValue, setInputValue] = useState("Ravindra");
+  const [inputValue, setInputValue] = useState("Enter Text");
 
   const clickHandler = () => {
     setCounter((counter = counter + 1));
+    console.log(counter);
   };
 
   const inputHandler = (event) => {
@@ -15,7 +17,8 @@ const StateTutorial = () => {
     if (newValue === "") {
       setInputValue("Enter Text");
     } else {
-      setInputValue(newValue);
+      setInputValue((prevState) => (prevState = newValue));
+      console.log(inputValue);
     }
   };
 
