@@ -3,7 +3,7 @@ import React, { forwardRef, useImperativeHandle, useState } from "react";
 //Button component uses forwardRef to allow the ref prop to be allowd in ImperativeHandle Component
 //where props, ref are the props in that order only
 
-//comment to check if the git commit is signed and working
+//comment to check if the git commit is signed
 const Button = forwardRef((props, ref) => {
   let [toggle, setToggle] = useState(false);
 
